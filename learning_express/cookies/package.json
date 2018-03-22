@@ -1,0 +1,12 @@
+{
+  "name": "cookies_example",
+  "version": "1.0.0",
+  "description": "cookies example",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6"
+  }
+}

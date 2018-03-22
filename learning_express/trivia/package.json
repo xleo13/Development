@@ -1,0 +1,11 @@
+{
+  "name": "trivia",
+  "version": "1.0.0",
+  "description": "express js examples",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2"
+  }
+}

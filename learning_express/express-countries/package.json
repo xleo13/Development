@@ -1,0 +1,13 @@
+{
+  "name": "express-countries",
+  "version": "1.0.0",
+  "description": "examples of expressjs",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "pg": "6.1.5",
+    "sequelize": "3.30.4"
+  }
+}

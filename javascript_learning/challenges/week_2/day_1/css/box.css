@@ -1,0 +1,15 @@
+div {
+	background-color: grey;
+	width: 100px;
+
+	/* padding get background-color */
+	padding: 50px;
+
+	/* border */
+	border-width: 5px;
+	border-color: red;
+	border-style: dotted;
+
+	/* margin is transparent */
+	margin: 125px;
+}

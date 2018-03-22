@@ -1,0 +1,170 @@
+<!--
+    jsjqas03_starter_file.html
+    This page contains the HTML that you can use
+    as a "starter file" for the assignment
+
+    Copyright Teresa Pelkie, 2017, Reproduction or Distribution on the Web is Prohibited
+-->
+<!DOCTYPE html>
+<!-- Luis Gutierrez -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title data-id="jsjqas03_starter_file">JSJQ Assignment 3</title>
+
+	<!-- start of style -->
+    <style>
+      body, input {
+          font-family: arial, sans-serif;
+          font-size: 100%;
+      }
+
+      h3 {
+          margin-bottom: 25px;
+      }
+
+      label {
+          clear: left;
+          display: block;
+          width: 150px;
+          height: 22px;       /* added to match default border on text box */
+          margin-bottom: 10px;
+          margin-right: 10px;
+          padding: 10px;
+          text-align: right;
+          float: left;
+      }
+
+      input[type=text] {
+          display: block;
+          float: left;
+          width: 100px;
+          height: 20px;
+          margin-right: 10px;
+          margin-bottom: 10px;
+          padding: 10px;
+      }
+
+      input:not([type=text]) {
+          display: block;
+          margin-top: 25px;
+          padding: 10px;
+      }
+
+      span {
+          color: red;
+          display: block;
+          float: left;
+      }
+
+      .clear{
+          clear: left;
+      }
+    </style>
+
+	<!-- start of JavaScript code -->
+    <script>
+		 function calculate() {
+
+			 //clear out errors
+			document.getElementById("miles_driven_error").firstChild.nodeValue = "";
+			document.getElementById("gallons_used_error").firstChild.nodeValue = "";
+			document.getElementById("price_gallon_error").firstChild.nodeValue = "";
+			document.getElementById("mpg").firstChild.nodeValue = "";
+			document.getElementById("cost").firstChild.nodeValue = "";
+
+
+
+			//variables needed to make calculation
+ 		 	var milesDriven = document.getElementById("miles_driven").value;
+			// alert("Miles Driven:" + milesDriven)
+			var gallonsGasUsed = document.getElementById("gallons_used").value;
+			// alert("Gallons used:" + gallonsUsed)
+			var pricePerGallon = document.getElementById("price_gallon").value;
+			// alert("Gallons used:" + priceGallon)
+			var milesPerGallon = Math.ceil( milesDriven / gallonsGasUsed );
+			var costOfTrip = Math.ceil(gallonsGasUsed * pricePerGallon);
+
+
+			//control statement to prevent words or numbers less than 0
+			if ( isNaN(milesDriven) || milesDriven <= 0 ) {
+				document.getElementById("miles_driven_error").firstChild.nodeValue =
+				"Please enter valid number";
+				return;
+			} else if ( isNaN(gallonsGasUsed) || gallonsGasUsed <= 0 ) {
+				// alert("please enter a valid number")
+				document.getElementById("gallons_used_error").firstChild.nodeValue =
+				"Please enter valid number";
+				return;
+			} else if ( isNaN(pricePerGallon) || pricePerGallon <= 0 ) {
+				// alert("please enter a valid number")
+				document.getElementById("price_gallon_error").firstChild.nodeValue =
+				"Please enter valid number";
+				return;
+			} else {
+				// alert("the cost of tripl is:" + costOfTrip)
+				document.getElementById("mpg").firstChild.nodeValue =
+				"the miles per gallon is:" + milesPerGallon;
+				document.getElementById("cost").firstChild.nodeValue =
+				"the cost of the trip is:" + costOfTrip;
+			}
+
+		}  //end of calculate function
+
+		//start of function to clear data  from page
+		function clearData() {
+			// alert("function clearData called");
+
+			//this clears out errors
+			document.getElementById("miles_driven_error").firstChild.nodeValue = "";
+			document.getElementById("gallons_used_error").firstChild.nodeValue = "";
+			document.getElementById("price_gallon_error").firstChild.nodeValue = "";
+			document.getElementById("mpg").firstChild.nodeValue = "";
+			document.getElementById("cost").firstChild.nodeValue = "";
+
+			//this clears out forms
+			document.getElementById("miles_driven").value = "";
+			document.getElementById("gallons_used").value = "";
+			document.getElementById("price_gallon").value = "";
+		}// end of function to clear data
+
+			//loads functions upon clicking buttons on page
+		 	window.onload = function() {
+				document.getElementById("btnCalc").onclick = calculate;
+				document.getElementById("btnClear").onclick = clearData;
+			}
+
+    </script>
+	<!-- end of JavaScript code -->
+
+</head>
+
+<body>
+    <h1>Calculate Your MPG</h1>
+    <h2>Enter the information below to see if you are getting good mileage!</h2>
+
+    <form id="mpgform">
+        <label for="miles_driven">Miles Driven: </label>
+        <input type="text"  id="miles_driven" name="miles_driven" >
+        <span class="error" id="miles_driven_error"> </span>
+
+        <label for="gallons_used">Gallons of Gas Used: </label>
+        <input type="text"  id="gallons_used" name="gallons_used" >
+        <span class="error" id="gallons_used_error"> </span>
+
+        <label for="price_gallon">Price per gallon: </label>
+        <input type="text"  id="price_gallon" name="price_gallon" >
+        <span class="error" id="price_gallon_error"> </span>
+
+        <input type="button" id="btnCalc"  value="Calculate the MPG and Cost of the Trip" class="clear">
+
+        <input type="button" id="btnClear" value="Clear Form">
+    </form>
+
+
+    <p id="mpg"> </p>
+
+    <p id="cost"> </p>
+
+</body>
+</html>

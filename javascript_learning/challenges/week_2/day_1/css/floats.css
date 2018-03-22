@@ -1,0 +1,45 @@
+body {
+    font-family: Gerogia, serif;
+    background: #999;
+}
+
+#body_wrap {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+}
+
+#body_wrap:after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+p {
+    margin: 0 0 15px 0;
+}
+
+#side_bar {
+    float: left;
+    width: 200px;
+}
+
+#main {
+    float: right;
+    width: 280px;
+	padding: 0px;
+}
+
+.little_box {
+    width: 20px;
+    height: 20px;
+    background: green;
+    margin: 5px;
+    float: right;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+}

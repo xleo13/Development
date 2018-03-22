@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			.redtext {
+				color: red;
+			}
+		</style>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+				function init() {
+				var planet = document.getElementById("greenplanet");
+				planet.innerHTML = "Red Alert: hit by phaser fire!";
+				var planet3 = document.getElementById("blueplanet");
+				planet3.innerHTML = "hello luis"
+
+				if (planet3.getAttribute("class") == null) {
+					planet3 = planet3.setAttribute("class","redtext");
+				}
+				console.log(planet3.getAttribute("class"));
+					// var access = document.getElementById("code9");
+					// var code = access.innerHTML = "coding is the best by ";
+		            //
+					// code= code + " midnight";
+					// alert(code);
+				}
+				window.onload = init;
+				</script>
+
+		</script>
+	</head>
+	<body>
+
+		<h1>Green Planet</h1>
+		<p id="greenplanet">All is well</p>
+		<h1>Red Planet</h1>
+		<p id="redplanet">Nothing to report</p>
+		<h1>Blue Planet</h1>
+		<p id="blueplanet">All systems A-OK</p>
+
+		<!-- <p id="code1">The eagle is in the</p>
+		<p id="code2">The fox is in the</p>
+		<p id="code3">snuck into the garden last night</p>
+		<p id="code4">they said it would rain</p>
+		<p id="code5">Does the red robbin crow at</p>
+		<p id="code6">Where can I find Mr.</p>
+		<p id="code7">I told the boys to bring tea and</p>
+		<p id="code8">Where's my dough? The cake won't</p>
+		<p id="code9">My watch stopped at</p>
+		<p id="code10">barking, can't fly without umbrella</p>
+		<p id="code11">The green canary flies at</p>
+		<p id="code12">The oyster owns a fine</p> -->
+
+	</body>
+</html>

@@ -1,0 +1,199 @@
+/* start of nav component*/
+/* The side navigation menu */
+.sidenav {
+	height: 100%; /* 100% Full-height */
+	width: 0; /* 0 width - change this with JavaScript */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Stay on top */
+	top: 0; /* Stay at the top */
+	left: 0px;
+	background-color: #111; /* Black*/
+	overflow-x: hidden; /* Disable horizontal scroll */
+	padding-top: 60px; /* Place content 60px from the top */
+	transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+	margin: none;
+}
+
+/* The navigation menu links */
+.sidenav a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+	color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+
+#nav-icon {
+	color: white;
+	position: fixed;
+	top:0px;
+	left: 15px;
+}
+
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+	transition: margin-left .5s;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+.sidenav {
+	padding-top: 15px;
+}
+
+.sidenav a {
+	font-size: 18px;
+}
+}
+/* end of nav component*/
+
+/*main body*/
+body, html {
+	height: 100%;
+	margin: 0;
+	font: 400 15px/1.8 "Lato", sans-serif;
+	color: #777;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+	position: relative;
+	opacity: 0.95;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 800px;
+}
+
+.bgimg-1 {
+	background-image: url("https://images.unsplash.com/photo-1456030680012-9aa5bd962cc4?auto=format&fit=crop&w=1500&q=80");
+	min-height: 100%;
+}
+
+.bgimg-2 {
+	background-image: url("https://images.unsplash.com/photo-1505238680356-667803448bb6?auto=format&fit=crop&w=1500&q=80");
+	min-height: 400px;
+}
+
+.bgimg-3 {
+	background-image: url("https://images.unsplash.com/photo-1509092564125-0a8f31e9710e?auto=format&fit=crop&w=1500&q=80");
+	min-height: 400px;
+}
+
+.caption {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 100%;
+	text-align: center;
+	color: #000;
+	top: 220px;
+}
+
+.caption span.border {
+	color: #fff;
+	padding: 18px;
+	font-size: 25px;
+	letter-spacing: 10px;
+}
+
+.border {
+	background-color: black;
+	opacity: .75;
+}
+
+.WordHeader {
+	text-align: center;
+	background-color: black;
+	margin: 0;
+}
+
+h3 {
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	font: 20px "Lato", sans-serif;
+	color: white;
+	margin : 0;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+.bgimg-1, .bgimg-2, .bgimg-3 {
+	background-attachment: scroll;
+}
+}
+/*end of body*/
+
+/*start of footer*/
+.footer {
+	position:fixed;
+	bottom: 0px;
+	width: 100%;
+	text-align: center;
+	position: fixed;
+	color: white;
+}
+/*end of footer*/
+
+/*start of side-logos icons */
+.sticky-container{
+	padding:0px;
+	margin:0px;
+	position:fixed;
+	right:-125px;
+	top:230px;
+	width:210px;
+	z-index: 1100;
+}
+
+.sticky li{
+	list-style-type:none;
+	color:#efefef;
+	height:43px;
+	padding:0px;
+	margin:0px 0px 5px 0px;
+	-webkit-transition:all 0.25s ease-in-out;
+	-moz-transition:all 0.25s ease-in-out;
+	-o-transition:all 0.25s ease-in-out;
+	transition:all 0.25s ease-in-out;
+	cursor:pointer;
+}
+.sticky li:hover{
+	margin-left:-115px;
+}
+.sticky li img{
+	float:left;
+	margin:5px 4px;
+	margin-right:5px;
+}
+.sticky li p{
+	padding-top:5px;
+	margin:0px;
+	line-height:16px;
+	font-size:11px;
+	padding-left: 50px;
+}
+.sticky li p a{
+	text-decoration:none;
+	color:white;
+}
+
+.sticky li p a:hover{
+	text-decoration:underline;
+}
