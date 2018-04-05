@@ -1,13 +1,5 @@
 .App {
-
-}
-
-h1 {
-	text-align: center;
-}
-
-.radio > label {
-	font-weight: bold;
+  text-align: center;
 }
 
 .App-logo {
@@ -29,7 +21,6 @@ h1 {
 .App-intro {
   font-size: large;
 }
-
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

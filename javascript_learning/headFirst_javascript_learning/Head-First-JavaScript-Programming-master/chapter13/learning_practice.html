@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			// String.prototype.cliche = function() {
+			// 	var cliche = ["lock and load", "touch base", "open the kimono"];
+            //
+			// 	for (var i = 0; i < cliche.length; i++ ) {
+			// 		var index = this.indexOf(cliche[i]);
+			// 		if (index >= 0) {
+			// 			return true
+			// 		}
+			// 	}
+			// }
+            //
+			// var sentences = ["I'll send my car around to pick you up.", "Let's touch base in the morning and see where we are.", "We don't want to open the kimono, we just want to inform them."];
+            //
+			// for (var i = 0; i < sentences.length; i++) {
+			// 	var phrases = sentences[i];
+			// 	if(phrases.cliche()) {
+			// 		console.log("CLICHE ALERT: " + phrases);
+			// 	}
+			// }
+
+			// function meditate() {
+			// 	console.log("Everything is and object...");
+			// }
+			// alert(meditate instanceof Object);
+
+			function Game() {
+				this.level = 0;
+			}
+
+			Game.prototype.play = function() {
+				this.level++;
+				console.log("Welcome to level " + this.level);
+				this.unlock();
+			}
+			Game.prototype.unlock = function() {
+				if (this.level === 42) {
+					Robot.prototype.deployLaser = function() {
+						console.log(this.name + " is blasting you with laser beams.");
+					}
+				}
+			}
+
+			function Robot(name, year, owner) {
+				this.name = name;
+				this.year = year;
+				this.owner = owner;
+			}
+
+			var game = new Game();
+			var robby = new Robot("Robby", 1956, "Dr. Morbius");
+			var rosie = new Robot("Rosie", 1962, "George Jetson");
+
+			while (game.level < 42) {
+				game.play();
+			}
+
+			robby.deployLaser();
+			rosie.deployLaser();
+		</script>
+	</body>
+</html>

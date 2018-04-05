@@ -1,0 +1,87 @@
+<!--
+    jsjqas04_starter_file.html
+    This page contains the HTML that you can use
+    as a "starter file" for the assignment
+
+    Copyright Teresa Pelkie, 2017, Reproduction or Distribution on the Web is Prohibited
+-->
+ <!DOCTYPE html>
+ by Luis Gutierrez
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title data-id="jsjqas04_starter_file">JSJQ Assignment</title>
+
+    <style>
+        body{
+            font-family: arial, sans-serif;
+            font-size: 100%;
+        }
+    </style>
+
+    <script>
+
+		//created a variable called today and assign it the value of new Date()
+		//which retrieves the day in the calender being retrieve, also chanined it
+		// the getDay() method which grabs the numerical value of the day.
+		var today = new Date().getDay()
+		// alert(today)
+
+		//created a variable assign to a constructor to create an empty Array
+		var dayNames = new Array();
+
+		//filled up array with items manually
+		dayNames[0] = "Sunday";
+		dayNames[1] = "Monday";
+		dayNames[2] = "Tuesday";
+		dayNames[3] = "Wednesday";
+		dayNames[4] = "Thursday";
+		dayNames[5] = "Friday";
+		dayNames[6] = "Saturday";
+		// alert(dayNames);
+
+		//same as as above, empty array being called dayQuotes
+		var dayQuotes = new Array();
+
+		//manually inputed items into empty array
+		dayQuotes[0] = "Ability is nothing without opportunity - Napoleon Bonaparte";
+		dayQuotes[1] = "Nothing happens unless first we dream - Carl Sandburg";
+		dayQuotes[2] = "Believe you can and you're halfway there - Theodore Roosevelt";
+		dayQuotes[3] = "A place for everything, everything in its place - Benjamin Franklin";
+		dayQuotes[4] = "Don't let the fear of striking out hold you back - Babe Ruth";
+		dayQuotes[5] = "We can't help everyone, but everyone can help someone - Ronald Reagan";
+		dayQuotes[6] = "With self-discipline most anything is possible - Theodore Roosevelt";
+		// alert(dayQuotes);
+
+		//created a variable called allQuotes and assign it a empty string value
+		var allQuotes = "";
+		//created a for-loop to iterate thru the amount of items in dayQuotes array, which is 0-6(7 items)
+			for (var i = 0; i < dayQuotes.length; i++) {
+				// alert(dayQuotes[i])
+				allQuotes += dayQuotes[i] + "<br>";
+			}
+
+		//created a function and assign it to window onload, which will reload our
+		//functions upon reload, inside function were rendering to the DOM(web page)
+		window.onload = function() {
+			document.getElementById("day").innerHTML = dayNames[today];
+			document.getElementById("quote").innerHTML = dayQuotes[today];
+			document.getElementById("allQuotes").innerHTML = allQuotes;
+
+		}
+    </script>
+</head>
+
+<body>
+
+    <h1>Day Quote</h1>
+	<h4 id="quote"></h4>
+	<h3 id="day"></h3>
+	<hr>
+	<h3>All the Quotes:</h3>
+	<p id="allQuotes"></p>
+
+
+</body>
+</html>

@@ -1,21 +1,51 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import UserForm from './components/userForm.js';
+import Header from './components/header.js'
 import './App.css';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+	constructor(props) {
+		super(props)
+		this.state = {
+			title: 'Forms In React',
+			userData: {
+				name: '',
+				description: '',
+				favoriteColor: '',
+				favoriteFruit: '',
+				likesJavascript: true
+			}
+		}
+	}
+
+	userDataUpdate(userData) {
+		this.setState({
+			userData: userData
+		}, () => {
+			console.log("state after user data update", this.state);
+		})
+	}
+
+	render() {
+		return (
+			<div className="App">
+				<Header title={this.state.title}/>
+				<div className="container">
+					<div className="row">
+						<div className="col-xs-6 col-xs-offset-3">
+							<div className="panel panel-default">
+								<div className="panel-body">
+									<UserForm
+									onSumbit={this.userDataUpdate.bind(this)}
+									userData={this.state.userData}/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		);
+	}
 }
 
 export default App;

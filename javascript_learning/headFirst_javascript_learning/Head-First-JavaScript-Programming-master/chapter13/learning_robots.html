@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function Robot(name, year, owner) {
+				this.name = name;
+				this.year = year;
+				this.owner = owner;
+			}
+
+			Robot.prototype.toString = function() {
+				return this.name + " Robot belonging to " + this.owner;
+			};
+
+			function SpaceRobot(name, year,owner, homePlanet) {
+				this.name = name;
+				this.year = year;
+				this.owner = owner;
+				this.homePlanet = homePlanet;
+			}
+			SpaceRobot.prototype = new SpaceRobot();
+
+			SpaceRobot.prototype.speak = function() {
+				alert(this.name + " says Sir, If I may venture an option...");
+			};
+
+			SpaceRobot.prototype.pilot = function() {
+				alert(this.name + " says Thrusters? Are they important?");
+			};
+
+			var toy = new Robot("Toy", 2013, "Avary");
+			console.log(toy.toString());
+
+			var c3po = new SpaceRobot("C3PO", 1977, "Luke Skywalker", "Tatooine");
+			c3po.speak();
+			c3po.pilot();
+			console.log(c3po.name + " was made by " + c3po.maker);
+			// var simon = new SpaceRobot("Simon", 2009, "Carla Diana", "Earth");
+			// simon.makeCofee();
+			// simon.blinkLights();
+			// simon.speak();
+
+			//setting up robot prototype with a maker property
+			Robot.prototype.maker = "ObjectRUs";
+
+			//setting up robot prototype  with a speak method
+			Robot.prototype.speak = function() {
+				alert("Warning warning!!");
+			};
+
+			//setting up robot prototype  with a make cofee method
+			Robot.prototype.makeCofee = function() {
+				alert("Making Cofee");
+			};
+
+			//setting up robot prototype  with a blink lights method
+			Robot.prototype.blinkLights = function() {
+				alert("Blink blink!");
+			;}
+
+			//create two robot instances from robot constructor
+			var robby = new Robot("Robby", 1956, "Dr. Morbius");
+			var rosie = new Robot("Rosie", 1962, "George Jetson");
+
+			//creating custom on off switch property to true for robby
+			robby.onOffSwitch = true;
+
+			//creating custom make cofee method for robby
+			robby.makeCofee = function() {
+				alert("Fetching a cofee from Starbucks.");
+			};
+
+			//creating rosie a custom method to clean house
+			rosie.cleanHouse = function() {
+				alert("Cleaning! spic and span soon...");
+			};
+
+			console.log(robby.name + " was made by " + robby.maker + " in " + robby.year + " and is owned " + robby.owner);
+
+			//calling robby the robot to make cofee by calling method from robby
+			robby.makeCofee();
+
+			//calling method from robby object
+			robby.blinkLights();
+
+			console.log(rosie.name + " was maded by " + rosie.maker + " in " + rosie.year + " and is owned by " + rosie.owner);
+			rosie.cleanHouse();
+		</script>
+	</body>
+</html>

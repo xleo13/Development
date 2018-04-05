@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Image Guess</title>
+		<style>
+		body{
+			margin: 20px;
+		}
+		img {
+			margin: 20px;
+		}
+		</style>
+		<script>
+
+		//window.onload loads as page gets loaded/reloaded, we can then assign our value we want, in this case a funtion we created
+		window.onload = init;
+
+		//this function creates variable called images thats equal to the reference document.getElementsByTagName("img") to reference all images tag in html
+		//create a for-loop to iterate thru the images elements by using the lenght property
+		//in the for-loop statement call images[i] to access specific image being called and chain-it with the onclick property and set it equal to the showAnswer function
+		function init() {
+			var images = document.getElementsByTagName("img");
+			for (var i = 0; i < images.length; i++) {
+				images[i].onmouseover = showAnswer;
+				images[i].onmouseout = reblur;
+			}
+		}
+
+		//this function is used to create a variable called image equal to event parameter target
+		//create variable called name equal to the newly created variable image and access its id property
+		//re-assign the varibale called name to equal its-self plus a string ".jpg" to access images
+		//the last line calls images chained with the src property and set it equal to the variable name
+		function showAnswer(e) {
+			var images = e.target;
+
+			var name = images.id;
+			name = name + ".jpg";
+			images.src = name;
+
+			// setTimeout(reblur, 2000, images);
+		}
+
+		function reblur(i) {
+			var image = i.target;
+			var name = image.id;
+			name = name + "blur.jpg";
+			image.src = name;
+		}
+		</script>
+	</head>
+	<body>
+		<img id="zero" src="zeroblur.jpg">
+		<img id="one" src="oneblur.jpg">
+		<img id="two" src="twoblur.jpg">
+		<img id="three" src="threeblur.jpg">
+		<img id="four" src="fourblur.jpg">
+		<img id="five" src="fiveblur.jpg">
+	</body>
+</html>
