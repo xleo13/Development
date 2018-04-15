@@ -7,7 +7,7 @@ div#board {
 	width: 1024px;
 	height: 863px;
 	margin: auto;
-	background: url("/Users/luisgutierrez/Desktop/development/personal_projects/simple_projects/battleship/images/board.jpg") no-repeat;
+	background: url("/Users/luisgutierrez/Desktop/development/personal_projects/projects/battleship/images/board.jpg") no-repeat;
 }
 
 div#messageArea {
