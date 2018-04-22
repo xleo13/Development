@@ -1,0 +1,3 @@
+Process.argv[2]
+When calling node app.js include second argument which is what port you want to listen to
+Ex) node app.js 3000
