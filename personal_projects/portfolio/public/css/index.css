@@ -1,3 +1,16 @@
+* {
+	box-sizing: border-box;
+}
+
+body, html {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	font: 400 15px/1.8 "Ubuntu", sans-serif;
+	color: #f1f1f1;
+	background: black;
+}
+
 /* start of nav component*/
 /* The side navigation menu */
 .sidenav {
@@ -11,8 +24,8 @@
 	overflow-x: hidden; /* Disable horizontal scroll */
 	padding-top: 60px; /* Place content 60px from the top */
 	transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-	margin: none;
 }
+
 
 /* The navigation menu links */
 .sidenav a {
@@ -32,46 +45,52 @@
 /* Position and style the close button (top right corner) */
 .sidenav .closebtn {
 	position: absolute;
-	top: 0;
+	top: 0px;
 	right: 25px;
-	font-size: 36px;
+	font-size: 250%;
 	margin-left: 50px;
 }
 
 #nav-icon {
-	color: white;
+	color: #f1f1f1;
 	position: fixed;
-	top:0px;
-	left: 15px;
+	top: 0;
+	left: 2%;
+	font-size: 300%;
+	cursor: pointer;
 }
+
+@media only screen and (max-width: 450px) {
+
+	#nav-icon {
+		font-size: 150%;
+	}
+
+}
+
 
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
 	transition: margin-left .5s;
+	min-height: 100%;
+  	position:relative;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
+@media only screen and (max-width: 450px) {
 .sidenav {
-	padding-top: 15px;
+	padding-top: 10px;
 }
 
 .sidenav a {
-	font-size: 18px;
+	margin-top: 15px;
+	font-size: 15px;
 }
 }
 /* end of nav component*/
 
 /*main body*/
-body, html {
-	height: 100%;
-	margin: 0;
-	font: 400 15px/1.8 "Lato", sans-serif;
-	color: #777;
-	font-family: Ubuntu;
-}
-
 .bgimg-1, .bgimg-2, .bgimg-3 {
 	position: relative;
 	opacity: 0.95;
@@ -130,7 +149,7 @@ h3 {
 	letter-spacing: 5px;
 	text-transform: uppercase;
 	font: 20px "Lato", sans-serif;
-	color: white;
+	color: #f1f1f1;
 	margin : 0;
 }
 
@@ -142,16 +161,139 @@ h3 {
 }
 /*end of body*/
 
-/*start of footer*/
-.footer {
-	position:fixed;
-	bottom: 0px;
-	width: 100%;
-	text-align: center;
-	position: fixed;
-	color: white;
+/*start of background video*/
+.homepage-hero-module {
+	border-right: none;
+	border-left: none;
+	position: relative;
+	display:inline;
 }
-/*end of footer*/
+
+.no-video .video-container video,
+.touch .video-container video {
+	display: none;
+}
+
+.no-video .video-container .poster,
+.touch .video-container .poster {
+	display: block !important;
+}
+
+.video-container {
+	position: relative;
+	bottom: 0%;
+	left: 0%;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	background: #000;
+}
+
+.video-container .poster img {
+	width: 100%;
+	bottom: 0;
+	position: absolute;
+}
+
+.video-container .filter {
+	z-index: -100;
+	position: absolute;
+	background: rgba(0, 0, 0, 0.4);
+	width: 100%;
+}
+
+.video-container video {
+	position: relative;
+	z-index: 0;
+	bottom: 7px;
+	margin-bottom: -7px;
+}
+
+.video-container video.fillWidth {
+	width: 100%;
+}
+/*end of background video*/
+
+/*start of images in a row*/
+.flex-container {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	height: 300px;
+	align-items: center;
+	width: 100%;
+	margin-top: 5%;
+	padding:10px;
+    padding-bottom:60px;
+}
+
+.container-img {
+	position: relative;
+	width: 40%;
+	margin-top: 2%;
+	margin: 5%;
+}
+
+.prjc-img {
+	border-radius: 25px;
+	width: 100%;
+	display: block;
+  	max-height: 375px;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .5s ease;
+	background-color: black;
+}
+
+.container-img:hover .overlay {
+	opacity: 1;
+	border-radius: 25px;
+}
+
+.text {
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-align: center;
+}
+/*end of images in a row*/
+
+/*start of header title*/
+#header {
+	display: flex;
+	flex-flow: row ;
+	justify-content: center;
+}
+
+#header >h1 {
+	position: absolute;
+	z-index: 1;
+	padding: 10px;
+	font-size: 3.5rem;
+}
+
+@media only screen and (max-width: 450px) {
+
+#header >h1 {
+	font-size: 1rem;
+	top: 5%;
+}
+}
+
+/*end of header title*/
 
 /*start of side-logos icons */
 .sticky-container{
@@ -166,7 +308,7 @@ h3 {
 
 .sticky li{
 	list-style-type:none;
-	color:#efefef;
+	color:#f1f1f1;
 	height:43px;
 	padding:0px;
 	margin:0px 0px 5px 0px;
@@ -177,7 +319,7 @@ h3 {
 	cursor:pointer;
 }
 .sticky li:hover{
-	margin-left:-115px;
+	margin-left:-50%;
 }
 .sticky li img{
 	float:left;
@@ -193,9 +335,63 @@ h3 {
 }
 .sticky li p a{
 	text-decoration:none;
-	color:white;
+	color:#f1f1f1;
 }
 
 .sticky li p a:hover{
 	text-decoration:underline;
 }
+
+/*start of footer*/
+.footer {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+footer {
+	position: absolute;
+	bottom: -125%;
+	width: 85%;
+	height: 60px;
+	text-align: center;
+	color: #f1f1f1;
+	background: white;
+	padding-bottom: 100px;
+}
+
+#footerImg {
+	height: 20%;
+	width: 10%;
+}
+
+@media only screen and (max-width: 450px) {
+	.flexContainer {
+		padding: 20px;
+	}
+
+	.footer {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		height: 20px;
+	}
+
+	footer {
+		position: absolute;
+		bottom: -30%;
+		width: 85%;
+		height: 5%;
+		text-align: center;
+		color: #f1f1f1;
+		background: white;
+		padding-bottom: 45px;
+	}
+
+	#footerImg {
+		height: 20%;
+		width: 10%;
+	}
+
+}
+/*end of footer*/

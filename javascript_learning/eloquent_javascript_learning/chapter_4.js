@@ -206,3 +206,51 @@ var myString = "Fido";
 myString.myproperty = "value";
 
 console.log(myString.myProperty);//logs out undefined
+
+console.log("cocunuts".slice(4,7));//logs out nut, logs everything in between index 4 and 7, excluding the last index given
+
+console.log("cocunut".indexOf("u"));//logs out 3, logs the index where parameter "u" is at in the word
+
+console.log("one two three".indexOf("ee"));//logs out 11 for the index number in the words
+
+console.log(" okay \n ".trim());//removes whitespace, newlines(ex \n), tabs
+//////////////////////////////////////////////////////////////////////////////
+
+var string = "abc";
+console.log(string.length);//logs out 3, for the number of words
+
+console.log(string.charAt(0));//logs out a , charAt searches specific parameters being passed
+
+console.log(string[1]);//[] square brackets another method to specifically search using paramters being passed
+
+//////////////////////////////////////////////////////////////////////////////
+
+// The argument Object
+
+function noArguments() {}
+noArguments(1,2,3)//passing arguments without parameters being passed when function is created is ok
+
+function threeArguments(a,b,c) {}
+threeArguments();//creating parameters first when function is created is also ok
+
+function argumentCounter() {
+	console.log("You gave me", arguments.length, "arguments.");
+} // this function statements block logs out a string, the amount of arguments if any beng passed, and another string.
+
+argumentCounter("Straw man", "Tautology", "Ad hominem");//logs out you gave 3 arguments
+
+//////////////////////////////////////////////////////////////////////////////
+
+//manual way of creating array
+addEntry(["work", "touched tree", "pizza", "running", "television"], false);
+
+//this function creates
+function addEntry(squirrel) {
+	var entry = {events: [], squirrel: squirrel};
+
+	for (var i = 1; i < arguments.length; i++)
+	entry.events.push(arguments[i]);
+	journal.push(entry);
+}
+
+addEntry(true, "work", "touched tree", "pizza", "running", "television");
