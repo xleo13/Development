@@ -1,0 +1,2 @@
+To make sequelize init work
+Type in terminal = yarn add sequelize --save

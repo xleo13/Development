@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>06 Class Demo</title>
+
+    <style>
+        span,
+        #result {
+            color: red;
+        }
+
+    </style>
+
+    <script>
+        // calculate the area
+        function getArea() {
+
+            //alert('getArea called');
+
+            var isValid = true; // set t/f flag
+
+
+            // clear out error messages
+            document.getElementById('errorw').innerHTML = '';
+            document.getElementById('errorh').innerHTML = '';
+
+            var theWidth = document.getElementById('width').value;
+            //alert("width is " + theWidth);
+
+            var theHeight = document.getElementById('height').value;
+            //alert("height is " + theHeight);    
+
+            // check for valid width
+            if (isNaN(theWidth) || theWidth <= 0) {
+                document.getElementById('errorw').innerHTML = "Please enter a valid number for width";
+                isValid = false; // set to false if invalid 
+            }
+
+            // check for valid height
+            if (isNaN(theHeight) || theHeight <= 0) {
+                document.getElementById('errorh').innerHTML = "Please enter a valid number for height";
+                isValid = false; // set to false if invalid 
+            }
+
+            // if value is valid perform calculations and display results
+            if (isValid) {
+                var theArea = theWidth * theHeight;
+                document.getElementById('result').innerHTML = "The area is " + theArea;
+            }
+
+        } //end function getArea
+
+        function clearAll() {
+            //alert('clear all called');
+            
+            document.getElementById('width').value = '';
+            document.getElementById('height').value = '';
+            document.getElementById('result').innerHTML = '';
+        } // end function clearAll
+
+
+        window.onload = function() {
+            document.getElementById('calc').onclick = getArea;
+            document.getElementById('clear').onclick = clearAll;
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Week 6 Class Demo</h1>
+
+    <form>
+
+        <p>
+            Width <input id="width"> <span id="errorw"></span>
+        </p>
+
+        <p>
+            Height <input id="height"> <span id="errorh"></span>
+        </p>
+
+        <p>
+            <input type="button" id="calc" value="Get Area">
+            <br>
+            <br>
+            <input type="button" id="clear" value="Clear All">
+        </p>
+
+    </form>
+
+
+    <p id="result"> </p>
+
+
+</body>
+
+</html>

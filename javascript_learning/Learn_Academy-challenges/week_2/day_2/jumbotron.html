@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+          <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <title>Bootstrap Buttons</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>HAL 9000</h1>
+          <p>Hello Dave</p>
+          <!-- BUTTONS -->
+          <!-- There are many built in button colors and sizes. If a link is to trigger in page functionality it should use role="button". The button element should be used in most situations -->
+          <p>
+            <a href="#" class="btn btn-default btn-lg" role="button">More info</a>
+            <button type="submit" class = "btn btn-danger" role = "button">Button</button>
+            <input type="button" value="Info" class = "btn btn-info">
+            <button type="submit" class = "btn-primary btn-sm">Primary</button>
+            <button type="submit" class = "btn btn-success btn-xs">Success</button>
+            <button type="submit" class = "btn btn-warning btn-lg">Warning</button>
+            <button type="submit" class = "btn btn-link btn-lg">Link</button>
+
+            <!-- You can disable buttons with disabled -->
+            <button type="button" class="btn btn-lg btn-primary" disabled="disabled">Primary</button>
+
+            <!-- You disable links in a similar way -->
+            <a href="#" class="btn btn-default btn-lg disabled" role="button">Link</a>
+
+            <!-- You can group buttons. You can size the buttons with btn-group-lg, btn-group-sm, or btn-group-xs -->
+            <div class="btn-group btn-group-lg" role="group">
+              <button type="button" class="btn btn-default">Small</button>
+              <button type="button" class="btn btn-default">Medium</button>
+              <button type="button" class="btn btn-default">Large</button>
+            </div>
+          </p>
+      </div>
+    </div>
+  </body>
+</html>

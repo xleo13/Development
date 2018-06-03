@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="js/aboutMe.js" type="text/javascript"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="css/aboutMe.css">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="HandheldFriendly" content="true">
+		<meta charset="utf-8">
+		<title>About Me</title>
+	</head>
+	<body class="bg">
+
+		<!-- start of left side nav -->
+		<div id="main">
+			<div id="mySidenav" class="sidenav">
+				<span id="nav-icon" onclick="openNav()">&#9776; Nav</span>
+
+				<div id="top"></div>
+				<div id="right"></div>
+				<div id="left"></div>
+				<div id="bottom"></div>
+
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+				<a href="index.html">Home</a>
+				<a href="projects.html">Projects</a>
+				<a href="aboutMe.html">About Me</a>
+			</div>
+		<!-- end of left side nav -->
+
+		<!-- start of RIGHT side icons-->
+			<div class="sticky-container">
+				<ul class="sticky">
+					<li>
+						<img src="images/light-blue-facebook-logo.png" width="32" height="32">
+						<p><a href="https://www.facebook.com/profile.php?id=100025094814099" target="">Like Me on<br>Facebook</a></p>
+					</li>
+					<li>
+						<img src="images/light-blue-twitter-logo.png" width="32" height="32">
+						<p><a href="https://github.com/xleo13" target="https://twitter.com/lagdevelopments">Follow Me on<br>Twitter</a></p>
+					</li>
+					<li>
+						<img src="images/light-blue-github-logo.png" width="32" height="32">
+						<p><a href="https://www.linkedin.com/in/luis-gutierrez-751371157/" target="">Follow Me on<br>GitHub</a></p>
+					</li>
+					<li>
+						<img src="images/light-blue-linkedin-logo.png" width="32" height="32">
+						<p><a href="https://www.linkedin.com/in/luis-gutierrez-751371157/" target="_blank">Follow Me on<br>LinkedIn</a></p>
+					</li>
+				</ul>
+			</div>
+		<!-- end of right side icons -->
+
+		<!-- start of text animation -->
+			<div class="jumbotron jumbotron-fluid">
+				<div class="container">
+					<ul class="text-animation hidden">
+						<li>M</li>
+						<li>e</li>
+						<li>,</li>
+						<li>M</li>
+						<li>y</li>
+						<li>s</li>
+						<li>e</li>
+						<li>l</li>
+						<li>f</li>
+						<li></li>
+						<li>a</li>
+						<li>n</li>
+						<li>d</li>
+						<li></li>
+						<li>I</li>
+					</ul>
+				</div>
+			</div>
+		<!-- end of text animation -->
+
+		<!-- start of tabs in a row -->
+			<p class="btn_p">
+				<a class="btn btn-primary collapsed" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Hobbies</a>
+				<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">skills</button>
+				<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">Email Me</button>
+				<button class="btn btn-primary collapsed" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2 multiCollapseExample3">toggle tabs</button>
+			</p>
+
+			<div class="row">
+				<div class="col">
+					<div class="multi-collapse collapse" id="multiCollapseExample1" style="">
+						<div class="card card-body">
+							My Hobbies are hiking, coding and spending time with my family.
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="collapse multi-collapse" id="multiCollapseExample2">
+						<div class="card card-body">
+							My skills are HTML, CSS, JavaScript, React js, Express js, Angular js, Mongodb, MySQL, postgres, Node js
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="collapse multi-collapse" id="multiCollapseExample3">
+						<div class="card card-body">
+							Please Email me to connect and create a great ideas into reality <br>
+							<strong>spartanxlg@gmail.com</strong>
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- end of tabs in a row -->
+
+		<!-- start of about me info -->
+			<div>
+				<img id="image-journal" src="https://images.unsplash.com/photo-1514474959185-1472d4c4e0d4?auto=format&amp;fit=crop&amp;w=1567&amp;q=80" height="75%" width="50%">
+			</div>
+			<span id="story">
+				About Me
+			</span>
+			<p id="centerSubtitle"> machinist by trade, coder by heart </p>
+
+			<p id="centerWords"> Finally realized what life is all about to achieve one's true potential! In the words by
+			Steve Jobs "The only way to do great work, is to love what you do". I have always
+			loved to look at a problem and try to solve it outside the box and solve problems in general,
+			thru all the experience I have acrued in my life I am a detail orientated. </p>
+
+			<ul id="list">
+				<li>
+					Love to hike
+				</li>
+				<li>
+					spend time with my family
+				</li>
+				<li>
+					solve problems
+				</li>
+			</ul>
+
+
+			<div class="flex-container">
+				<div class="container">
+					<img class="img" src="images/express_0.png" alt="express.js icon"/>
+					<img class="img" src="images/HTML5CSS3Logos.svg" alt="html and css icons"/>
+					<img class="img" src="images/mysql-backup.png" alt="my sql icon"/>
+					<img class="img" src="images/nodejs-new-pantone-black.png" alt="node.js icon"/>
+					<img class="img" src="images/postgresql-logo.png" alt="postgres icon"/>
+					<img class="img" src="images/React-JS.sh.png" alt="react.js"/>
+				</div>
+			</div>
+
+
+			<div class="footer">
+				<footer>
+					<h6>
+						<img id="footerImg" src="images/white-gray-LMBD-logo.png" alt="pic of logo">LAG Web Developments
+					</h6>
+				</footer>
+			</div>
+
+		</div>
+		<script>
+			$(function() {
+				setTimeout(function() {
+					$('.text-animation').removeClass('hidden');
+				}, 500);
+			});
+		</script>
+	</body>
+</html>

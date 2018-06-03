@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title data-id="jsjqas06_starter_file">Assignment FAQs Starter File</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: 100%;
+            margin: 20px;
+            padding: 10px;
+        }
+
+        section {
+            padding: 15px 25px;
+            width: 650px;
+            margin-top: 20px;
+            margin-left: 25px;
+        }
+
+        h1 {
+            font-size: 150%;
+        }
+
+
+        h2 {
+            font-size: 120%;
+            padding: .25em 0 .25em 25px;
+            cursor: pointer;
+        }
+
+
+        /* classes that you will use */
+
+        .plus {
+            background: url(plus.png) no-repeat left center;
+        }
+
+        .minus {
+            background: url(minus.png) no-repeat left center;
+        }
+
+        .close {
+            display: none;
+        }
+
+        .open {
+            display: block;
+        }
+
+		.black {
+			background: black;
+		}
+
+        ul {
+            padding-left: 45px;
+        }
+
+        li {
+            padding-bottom: .25em;
+        }
+
+        p {
+            padding-bottom: .25em;
+            padding-left: 25px;
+        }
+
+        aside {
+            margin-top: 50px;
+        }
+
+        aside h2, header h2{
+            cursor: auto;
+        }
+
+    </style>
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+
+	<script>
+	$(document).ready(function(){
+		$("#faqs h2:not(:last)").addClass("plus");
+		$("#faqs div:not(:last)").addClass("close")
+
+		$("#faqs h2:first").click(function(){
+			$("#faqs div:first").toggleClass("open");
+			$("#faqs h2:first").toggleClass("minus");
+		})
+
+		$("#faqs h2:odd").click(function(){
+		$("#faqs div:odd:not(:last)").toggleClass("close");
+		$("#faqs h2:odd:not(:last)").toggleClass("minus");
+		})
+
+		$("#faqs h2:nth-child(5)").click(function(){
+			$("#faqs div:not(:first):not(:even)").toggleClass("close");
+			$("#faqs h2:not(:first):not(:even)").toggleClass("minus");
+		})
+
+	});
+	</script>
+
+</head>
+
+<body>
+    <header>
+      <h1>jQuery FAQs</h1>
+      <h2>Frequently Asked Questions</h2>
+    </header>
+
+    <section id="faqs">
+
+        <h2>What is jQuery?</h2> <!-- need to add class="plus" here -->
+
+        <div> <!-- need to add class="close" here -->
+            <p>
+				jQuery is a library of the JavaScript functions that you're most likely to need as you develop web sites.
+            </p>
+        </div>
+
+        <h2>Why is jQuery becoming so popular?</h2> <!-- need to add class="plus" here -->
+        <div> <!-- need to add class="close" here -->
+            <p>Three reasons:</p>
+            <ul>
+                <li>It's free.</li>
+                <li>It lets you get more done in less time.</li>
+                <li>All of its functions are cross-browser compatible.</li>
+            </ul>
+        </div>
+
+        <h2>Which is harder to learn: jQuery or JavaScript?</h2> <!-- need to add class="plus" here -->
+        <div> <!-- need to add class="close" here -->
+            <p>For most functions, jQuery is significantly easier to learn and use than JavaScript. But remember that jQuery is JavaScript.
+            </p>
+        </div>
+
+        <aside>
+			<h2>Resources:</h2>
+            <div>
+                <p>jQuery Website - <a href="http://jquery.com" target="_blank">http://jquery.com</a>
+                </p>
+            </div>
+        </aside>
+    </section>
+</body>
+</html>
