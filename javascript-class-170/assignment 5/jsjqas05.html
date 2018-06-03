@@ -1,0 +1,109 @@
+<!--
+    jsjqas05_starter_file.html
+    This page contains the HTML that you can use
+    as a "starter file" for the assignment
+
+    Copyright Teresa Pelkie, 2017, Reproduction or Distribution on the Web is Prohibited
+-->
+<!DOCTYPE html>
+<!-- by Luis Gutierrez -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title data-id="jsjqas05_starter_file">JSJQ Assignment 5</title>
+
+    <style>
+        body {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: 100%;
+            margin: 20px;
+            padding: 10px;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        footer p {
+            border-top: 1px solid #000;
+            padding: 10px;
+        }
+
+        #info div {
+            display: none;
+        }
+        /* class to add to show the content - 'more' */
+
+        #info div.more {
+            display: block;
+        }
+
+        #info h2 {
+            cursor: pointer;
+		}
+    </style>
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+
+	</script>
+	<script>
+	window.onload = function() {
+		document.querySelector("#info h2").addEventListener("click", handleClick);
+
+		function handleClick() {
+			var value = document.querySelector("#info h2").innerHTML;
+			var addClass;
+			// console.log(value)
+
+			if(value === "Show More...") {
+				var addClass = document.querySelector("#info div").setAttribute("class", "more");
+				document.querySelector("#info h2").innerHTML = "Show Less..."
+			} else{
+				var addClass = document.querySelector("#info div").removeAttribute("class", "more");
+				document.querySelector("#info h2").innerHTML = "Show More..."
+			}
+		}
+	}
+
+	</script>
+</head>
+
+<body>
+    <header>
+        <h1>Vitamins and Supplements Depot</h1>
+        <h2>Curcumin 95 - $20.99</h2>
+    </header>
+
+    <section>
+        <figure>
+            <img src="https://media.swansonvitamins.com/images/items/250/JR187.png" alt="Photo of Curcumin 95">
+        </figure>
+        <ul>
+            <li>Curcumin 95 protects against oxidative damage</li>
+            <li>Delivers 95% curcuminoids</li>
+            <li>500 mg per capsule</li>
+            <li>120 veg capsules</li>
+            <li>Not genetically modified</li>
+            <li>Vegan</li>
+            <li>Gluten free</li>
+        </ul>
+    </section>
+
+
+    <section id="info">
+        <h2>Show More...</h2>
+        <div>
+            <p>Other Ingredients: Cellulose, magnesium stearate (vegetable source) and silicon dioxide. Capsule consists of hydroxypropylmethylcellulose.</p>
+
+            <p>Usage: Take 1 capsule per day with food or as directed by your qualified healthcare professional</p>
+
+            <p>Note: If you have a medical condition, are pregnant, lactating, trying to conceive, under the age of 18, or taking medications, consult your healthcare professional before using this product.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright&copy; Vitamins and Supplements Depot</p>
+    </footer>
+</body>
+
+</html>

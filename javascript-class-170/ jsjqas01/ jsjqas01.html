@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- Luis Gutierrez -->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+		var initialCost = 200;
+		var discountTax = .10;
+		var taxRate = .0725;
+		var shippingCost = 5.50;
+
+		var discountedAmount = initialCost * discountTax;
+		// alert("the discounted amount is: " + discountedAmount)
+		var discountCost = initialCost - discountedAmount;
+		// alert(discountCost)
+		var taxAmount = discountCost * taxRate;
+		//alert(taxAmount)
+		var finalCost = discountCost + taxAmount;
+		//alert(finalCost)
+		var finalCostShipping = finalCost + shippingCost;
+		//alert(finalCostShipping)
+
+		</script>
+
+		<h1><bold>Calculations</bold></h1>
+
+		<p id="h1"></p>
+		<p id="h2"></p>
+		<p id="h3"></p>
+		<p id="h4"></p>
+		<p id="h5"></p>
+
+		<script>
+		document.getElementById("h1").innerHTML = "the initial cost is : " + initialCost;
+		document.getElementById("h2").innerHTML = "the discounted price is : " + discountCost;
+		document.getElementById("h3").innerHTML = "the tax is : " + taxAmount.toFixed(2);
+		document.getElementById("h4").innerHTML = "the final cost is : " + finalCost;
+		document.getElementById("h5").innerHTML = "the final cost including shipping cost is : " + finalCostShipping;
+	</script>
+
+
+	</body>
+</html>
