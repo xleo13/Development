@@ -8,7 +8,7 @@
  *
  * Open source under the BSD License.
  *
- * Copyright © 2008 George McGinley Smith
+ * Copyright ï¿½ 2008 George McGinley Smith
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -36,6 +36,7 @@
 */
 
 // t: current time, b: begInnIng value, c: change In value, d: duration
+module.exports = app;
 jQuery.easing['jswing'] = jQuery.easing['swing'];
 
 jQuery.extend( jQuery.easing,
@@ -177,7 +178,7 @@ jQuery.extend( jQuery.easing,
  *
  * Open source under the BSD License.
  *
- * Copyright © 2001 Robert Penner
+ * Copyright ï¿½ 2001 Robert Penner
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
