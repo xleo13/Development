@@ -10,19 +10,21 @@ import './App.css';
 import Cats from './pages/Cats';
 import NewCat from './pages/NewCat';
 
+const apiUrl = process.env.REACT_APP_NODE_ENV === 'production' ? "https://cat-tinder-app.herokuapp.com" : "http://localhost:3001"
+
+
 class App extends Component {
 	constructor(props) {
 		super(props)
 		this.state ={
-			apiUrl: "http://localhost:3001",
 			cats: [],
-			newCatSuccedd: false,
+			newCatSuccess: false,
 			errors: null
 		}
 	}
 
 	componentWillMount() {
-		fetch(`${this.state.apiUrl}/cats`)
+		fetch(`${apiUrl}/cats`)
 		.then((rawResponse) => {
 			return rawResponse.json();
 		})
@@ -32,7 +34,7 @@ class App extends Component {
 	}
 
 	handleNewcat(params) {
-		fetch(`${this.state.apiUrl}/cats`,
+		fetch(`${apiUrl}/cats`,
 		{
 			body:JSON.stringify(params), // <- we need to stringify the json for fetch
 			headers: {  // <- We specify that we're sending JSON, and expect JSON back

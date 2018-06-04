@@ -3,10 +3,10 @@ var cors = require('cors')
 var bodyParser = require('body-parser');
 var validator = require('express-validator');
 var app = express();
-var Cat = require("./models").Cat;
+var Cat = require('./models').Cat;
 var path = require('path');
 
-app.use(express.static('public'));
+app.use(express.static('public')); // NOTE: might need to get rid of this code
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(validator());
@@ -60,9 +60,7 @@ app.post('/cats', (req, res) => {
 app.use('/*', staticFiles)
 
 app.set('port', (process.env.PORT || 3001))
+
 app.listen(app.get('port'), () => {
   console.log(`Listening on ${app.get('port')}`)
 })
-
-
-module.exports = app
