@@ -5,22 +5,16 @@ import Logo from './components/Logo.js';
 import Nav from './components/Nav.js';
 import TopSearch from './components/TopSearch.js';
 import PageTitle from './components/PageTitle.js';
+import './css/style.css';
+import './css/dark.css';
+import './css/font-icons.css';
+import './css/animate.css';
+import './css/magnific-popup.css';
+import './css/responsive.css';
+import './css/bootstrap.css';
 
 export default class App extends Component {
     render() {
-
-        const style = {
-            backgroundImage: 'url(images/portfolio/parallax/1.jpg)'
-        };
-
-        const style2 = {
-            backgroundPosition:"0px, 300px"
-        };
-
-        const style3 = {
-            backgroundPosition:"0px,-300px"
-        };
-
         return (
             <div className="stretched">
                 <div id="wrapper" className="clearfix">
@@ -28,9 +22,9 @@ export default class App extends Component {
                         <div className="container clearfix">
                             <div id="primary-menu-trigger"><i className="icon-reorder"></i>
 
-                                <div id="logo">
-                                <Logo />
-                                </div>
+                                
+                                        <Logo />
+
 
 
                                 <Nav id="primary-menu">
@@ -60,7 +54,7 @@ export default class App extends Component {
             				<div id="portfolio" className="portfolio portfolio-parallax clearfix">
 
             					<article className="portfolio-item pf-media pf-icons">
-            						<div className="portfolio-image" style={{style}} data-bottom-top={{style2}} data-top-bottom={{style3}}>
+            						<div className="portfolio-image" style={{background: 'url(images/portfolio/parallax/1.jpg)'}} data-bottom-top={{backgroundPosition:'0px, 300px'}} data-top-bottom={{backgroundPosition:'0px, -300px'}}>
                                     <div className="portfolio-overlay"></div></div>
             						<div className="portfolio-desc">
             							<h3><a href="portfolio-single.html">Open Imagination</a></h3>
