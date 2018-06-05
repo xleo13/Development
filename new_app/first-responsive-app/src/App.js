@@ -2,12 +2,7 @@ import React, { Component } from 'react';
 import Nav from './components/Nav.js';
 import './App.css';
 import './css/style.css';
-import './css/dark.css';
-import './css/font-icons.css';
-import './css/animate.css';
-import './css/magnific-popup.css';
-import './css/responsive.css';
-import './css/bootstrap.css';
+
 
 export default class App extends Component {
     render() {
@@ -62,17 +57,14 @@ aria-current="page">Portfolio</li>
         		============================================= */}
         <section id="content">
           <div className="content-wrap nopadding">
-            <div
-id="portfolio"
-className="portfolio portfolio-parallax clearfix">
+            <div id="portfolio" className="portfolio portfolio-parallax clearfix">
               <article className="portfolio-item pf-media pf-icons">
                 <div
-className="portfolio-image"
-style={{backgroundImage: "url(" + 'images/portfolio/parallax/1.jpg'+ ")"}}
-data-bottom-top="background-position:0px 300px;"
-data-top-bottom="background-position:0px -300px;">
-<div className="portfolio-overlay" />
-</div>
+                    className="portfolio-image" id="portfolio-bg1"
+                    data-bottom-top="background-position:0px 300px;"
+                    data-top-bottom="background-position:0px -300px;">
+                    <div className="portfolio-overlay" />
+                    </div>
                 <div className="portfolio-desc">
                   <h3>
 <a href="portfolio-single.html">
@@ -90,8 +82,7 @@ Open Imagination
               </article>
               <article className="portfolio-item pf-media pf-icons">
                 <div
-className="portfolio-image"
-style={{backgroundImage: 'url("images/portfolio/parallax/2.jpg")'}}
+className="portfolio-image" id="portfolio-bg2"
 data-bottom-top="background-position:0px 300px;"
 data-top-bottom="background-position:0px -300px;">
 <div className="portfolio-overlay" />
@@ -112,8 +103,7 @@ Locked Steel Gate
               </article>
               <article className="portfolio-item pf-media pf-icons">
                 <div
-className="portfolio-image"
-style={{backgroundImage: 'url("images/portfolio/parallax/3.jpg")'}}
+className="portfolio-image" id="portfolio-bg3"
 data-bottom-top="background-position:0px 300px;"
 data-top-bottom="background-position:0px -300px;">
 <div className="portfolio-overlay" />
@@ -137,8 +127,7 @@ UI Elements
               </article>
               <article className="portfolio-item pf-media pf-icons">
                 <div
-className="portfolio-image"
-style={{backgroundImage: 'url("images/portfolio/parallax/4.jpg")'}}
+className="portfolio-image" id="portfolio-bg4"
 data-bottom-top="background-position:0px 300px;"
 data-top-bottom="background-position:0px -300px;">
 <div className="portfolio-overlay" />
@@ -161,8 +150,7 @@ Morning Dew
               </article>
               <article className="portfolio-item pf-media pf-icons">
                 <div
-className="portfolio-image"
-style={{backgroundImage: 'url("images/portfolio/parallax/9.jpg")'}}
+className="portfolio-image" id="portfolio-bg5"
 data-bottom-top="background-position:0px 300px;"
 data-top-bottom="background-position:0px -300px;">
 <div className="portfolio-overlay" />
@@ -184,8 +172,7 @@ Bridge Side
               </article>
               <article className="portfolio-item pf-media pf-icons">
                 <div
-className="portfolio-image"
-style={{backgroundImage: 'url("images/portfolio/parallax/6.jpg")'}}
+className="portfolio-image" id="portfolio-bg6"
 data-bottom-top="background-position:0px 300px;"
 data-top-bottom="background-position:0px -300px;">
 <div className="portfolio-overlay" />
@@ -207,8 +194,7 @@ Shake It!
               </article>
               <article className="portfolio-item pf-media pf-icons">
                 <div
-className="portfolio-image"
-style={{backgroundImage: 'url("images/portfolio/parallax/7.jpg")'}}
+className="portfolio-image" id="portfolio-bg7"
 data-bottom-top="background-position:0px 300px;"
 data-top-bottom="background-position:0px -300px;">
 <div className="portfolio-overlay" />
@@ -232,8 +218,7 @@ UI Elements
               </article>
               <article className="portfolio-item pf-media pf-icons">
                 <div
-className="portfolio-image"
-style={{backgroundImage: 'url("images/portfolio/parallax/10.jpg")'}}
+className="portfolio-image" id="portfolio-bg8"
 data-bottom-top="background-position:0px 300px;"
 data-top-bottom="background-position:0px -300px;">
 <div className="portfolio-overlay" />

@@ -3736,6 +3736,41 @@ body:not(.device-touch) .portfolio {
 	overflow: hidden;
 }
 
+#portfolio-bg1 {
+	background-image: url('../images/portfolio/parallax/1.jpg');
+}
+
+#portfolio-bg2 {
+	background-image: url('../images/portfolio/parallax/2.jpg');
+}
+
+#portfolio-bg3 {
+	background-image: url('../images/portfolio/parallax/3.jpg');
+}
+
+#portfolio-bg4 {
+	background-image: url('../images/portfolio/parallax/4.jpg');
+}
+
+#portfolio-bg5 {
+	background-image: url('../images/portfolio/parallax/9.jpg');
+}
+
+#portfolio-bg6 {
+	background-image: url('../images/portfolio/parallax/6.jpg');
+}
+
+#portfolio-bg7 {
+	background-image: url('../images/portfolio/parallax/7.jpg');
+}
+
+#portfolio-bg8 {
+	background-image: url('../images/portfolio/parallax/10.jpg');
+}
+
+
+
+
 .portfolio-item .portfolio-image,
 .portfolio-item .portfolio-image a,
 .portfolio-item .portfolio-image img {
