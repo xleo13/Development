@@ -6,9 +6,9 @@ import {
   FormGroup,
   FormControl,
   Alert,
-  HelpBlock
-} from 'react-bootstrap'
-import { Button } from 'reactstrap';
+  HelpBlock,
+  Button
+} from 'react-bootstrap';
 
 export default class NewCat extends Component{
 	constructor(props) {
@@ -137,6 +137,7 @@ export default class NewCat extends Component{
 					<Row>
 						<Col xs={6}>
 						<Button
+						bsStyle="primary"
 						id="submit"
 						color="info"
 						size="lg"
