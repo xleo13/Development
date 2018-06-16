@@ -4,7 +4,7 @@ module.exports = {
 	up: (queryInterface, Sequelize) => {
 		return queryInterface.bulkInsert('Cats',
 			[
-				{
+{
 				name: 'Morris',
 				age: 4,
 				enjoys: "Enjoys long walks from window to food bowl. Its a tough job out there for a cat.",
@@ -30,6 +30,6 @@ module.exports = {
 	},
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.bulkDelete('Users', null, {});
+    return queryInterface.bulkDelete('Cats', null, {});
   }
 };

@@ -1,9 +1,13 @@
+
 import React, {Component} from 'react';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Content from './components/Content'
 import Header from  './components/Header'
 import PageTitle from  './components/PageTitle'
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import './App.css';
+
 import './App.css';
 import './css/dark.css';
 import './css/font-icons.css';
@@ -18,6 +22,7 @@ import './css/bootstrap.css';
 export default class App extends Component {
     render() {
         return (
+
             <div>
                 <Header />
                 <br />
@@ -27,6 +32,7 @@ export default class App extends Component {
                 <Footer />
                 <div id="gotoTop" className="icon-angle-up"> </div>
             </div>
+
         );
     }
 }
