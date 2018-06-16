@@ -1,4 +1,3 @@
-module.exports = app;
 var $ = jQuery.noConflict();
 
 $.fn.inlineStyle = function (prop) {
